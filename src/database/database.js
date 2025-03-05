@@ -44,12 +44,12 @@ export class Database {
   }
 
   update(table, id, data) {
-    const rowId = this.#database[table].findIndex((row) =>
+    const rowIndex = this.#database[table].findIndex((row) =>
       row.id === id)
 
-    if (rowId > -1) {
+    if (rowIndex > -1) {
       this.#database[table][rowIndex] = {
-        ...this.#database[table[rowIndex]],
+        ...this.#database[table][rowIndex],
         ...data
       }
 

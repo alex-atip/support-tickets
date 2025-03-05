@@ -4,7 +4,7 @@ export function update({ request, response, database}) {
 
   database.update("tickets", id, {
     equipment, 
-    description ,
+    description,
     updated_at: new Date()
     })
   
